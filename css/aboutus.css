@@ -1,0 +1,593 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Shilla_CultureB-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Pretendard";
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    min-width: 1320px;
+    background-color: #111;
+}
+
+/* 헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1.5% 10px 15%;
+}
+
+.menu2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 5%;
+}
+
+.header div {
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40%;
+}
+
+.logo img {
+    max-width: 100%;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    width: 80%;
+}
+
+
+.menu li {
+    flex: 1;
+    text-align: center;
+
+}
+
+.menu li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 0;
+    border-bottom: 2px solid #111;
+}
+
+.menu li,
+.menu2 li {
+    position: relative;
+}
+
+.menu a:hover {
+    border-bottom: 2px #ff6600 solid;
+}
+
+
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+
+
+/* 서브메뉴*/
+
+.submenu {
+    text-align: center;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #131313;
+    display: none;
+    min-width: 150px;
+    z-index: 1000;
+    padding-top: 0px;
+    padding-bottom: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.submenu li {
+    width: 100%;
+}
+
+
+.submenu a {
+    padding: 20px 0;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+}
+
+.submenu>li>a {
+    font-size: 15px;
+}
+
+.submenu a:last-child {
+    border-bottom: none;
+}
+
+.submenu a:hover {
+    background-color: #FF6500;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+
+/* /서브메뉴 */
+
+/* 메인배너 */
+.mainbanner {
+    display: block;
+    width: 100%;
+}
+
+/* 띠배너 */
+.scrolling-banner {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: url(../images/aboutus/line\ banner.png) no-repeat center /cover;
+    overflow: hidden;
+}
+
+.scrolling-text {
+    font-family: 'Shilla_CultureB-Bold'; 
+    position: absolute;
+    white-space: nowrap;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    animation: scroll-text 9s linear infinite;
+    padding: 8px 0;
+    display: flex;
+    gap: 20px;
+}
+
+@keyframes scroll-text {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: calc(-3973px + 100%);
+    }
+
+}
+
+/* 콜라주로고 */
+.collage {
+    display: block;
+    text-align: center;
+    margin: 100px auto;
+}
+
+/* 컨텐츠1 */
+
+
+.content1 {
+    width: 1320px;
+    /* 콘텐츠의 고정 너비 */
+    margin: auto;
+    /* 중앙 정렬 */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: center;
+}
+
+
+.slider {
+    width: 310px;
+    height: 315px;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    animation: slideAnimation 4s infinite;
+}
+
+.slide img {
+    width: 310px;
+    height: 315px;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    75% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.buger-container {
+    position: relative;
+    width: 413px;
+    height: 315px;
+
+}
+
+.buger {
+    position: absolute;
+    width: 100%;
+    /* 이미지 크기 */
+    height: auto;
+    top: 50%;
+    /* 컨테이너의 중앙에 배치 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    animation: move 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes move {
+
+
+    0% {
+        /* transform: translate(-50%, -50%) rotate(-10deg);  */
+    }
+
+    100% {
+        /* transform: translate(-50%, -50%) rotate(10deg);  */
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.guitar-container {
+    position: relative;
+    width: 425px;
+    height: 515px;
+}
+
+.guitar {
+    position: absolute;
+    width: 100%;
+    /* 이미지 크기 */
+    height: auto;
+    top: 50%;
+    /* 컨테이너의 중앙에 배치 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 완전 중앙 정렬 */
+    transform-origin: center;
+    animation: moveHead 0.7s infinite alternate ease-in-out;
+    /* 애니메이션 */
+}
+
+@keyframes moveHead {
+    0% {
+        transform: translate(-50%, -50%) rotate(-30deg);
+        /* 위로 살짝 기울임 */
+    }
+
+    100% {
+        transform: translate(-80%, -40%) rotate(-70deg);
+        /* 아래로 살짝 기울임 */
+    }
+}
+
+
+
+.context1 {
+    align-items: center;
+    /* 이미지와 텍스트 수직 중앙 정렬 */
+    padding: 20px;
+}
+
+.context1 {
+
+    margin-right: 20px;
+    /* 이미지와 간격 추가 */
+}
+
+.context1 h1 {
+    font-family: "Roboto", serif;
+    font-size: 40px;
+    /* 큰 헤더 텍스트 */
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 110%;
+    /* display: inline-block; */
+    padding: 5px 0;
+    padding-right: 10px;
+}
+
+.context1 p {
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+
+/* 이미지 스타일 */
+.context1 img {
+    width: 100px;
+    /* 고정 이미지 크기 */
+    height: auto;
+}
+
+/* 형광펜 */
+
+.mark{
+    background:linear-gradient(to right, rgba(255,255,255,0) 50%, #ff6600 );
+    background-size:200%;
+    transition:.35s;
+}
+.text:hover .mark{
+    background-position:-100% 0;
+}
+
+
+/* 형광펜 */
+
+/* 중간배너 */
+.middlebanner {
+    background: url(../images/aboutus/slogun.png) no-repeat center top / cover;
+    margin: 100px 0;
+    
+}
+
+.middlebanner img {
+    width: 100%
+}
+
+/* 영상 */
+.concert-section {
+    width: 1320px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.concert-section h1 {
+    font-size: 50px;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+}
+
+.concert-section p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-top: 80px ;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+
+/* map */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a2a40;
+    align-items: center;
+}
+
+.left-section,
+.right-section {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.left-section {
+    padding: 50px 20px 50px 200px;
+}
+
+.left-section h1 {
+    font-size: 40px;
+}
+
+.left-section h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0 30px 0;
+    outline: none;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+
+.left-section ul {
+    display: flex;
+    gap: 20px;
+}
+
+.left-section li a {
+    font-size: 16px;
+    color: #fff;
+}
+
+.left-section li {
+    border-bottom: #2a2a40 2px solid;
+}
+
+.left-section li:hover {
+    border-bottom: 2px #ff6600 solid;
+    color: #ff6600;
+}
+
+.left-section p {
+    padding-top: 40px;
+    font-size: 16px;
+}
+
+.right-section {
+    position: relative;
+}
+
+.map1 {
+    width: 100%;
+    display: block;
+}
+
+.map2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -140px;
+}
+
+
+/* /map */
+
+
+
+/* footer */
+
+
+.footer {
+
+    height: 380px;
+    background-image: url(../images/main/footer_background.png);
+    background-size: cover;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+
+.footer_logo {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: center;
+}
+
+.numb {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.mail {
+    font-size: 21px;
+}
+
+.footer-contact {
+    width: 1320px;
+    text-align: right;
+    margin: 10px 0;
+}
+
+.reserve-button {
+    display: inline-block;
+    padding: 10px 80px;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+
+}
+
+.contact-number {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+
+.reserve-button:hover {
+    background-color: #ff6600;
+    color: #121212;
+    border-color: #ff6600;
+}
+
+/* 소셜 미디어 아이콘 */
+.social-icons {
+    text-align: right;
+    padding: 10px 0;
+}
+
+.social-icons a img {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+    /* 확대 효과 */
+}
+
+/* 저작권 텍스트 */
+.copyright {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
