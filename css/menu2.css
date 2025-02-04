@@ -355,7 +355,7 @@ h1 {
     background: rgba(0, 0, 0, 0.6);
     /* 반투명한 어두운 배경 */
     color: white;
-    padding-top: 130px;
+    padding-top: 120px;
     box-sizing: border-box;
     text-align: center;
     font-weight: bold;
@@ -390,11 +390,15 @@ h1 {
     opacity: 1;
 }
 
-.description p {
-    padding-top: 30px;
+.description h3{
+    font-size: 30px;
+  }
+  .description p{
+    padding-top: 15px ;
     font-size: 18px;
     font-weight: 300;
-}
+  }
+
 
 
 

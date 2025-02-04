@@ -279,7 +279,7 @@ span{
     background: rgba(0, 0, 0, 0.6); /* 반투명한 어두운 배경 */
     color: white;
     align-items: center;
-   padding-top: 100px;
+   padding-top: 120px;
     text-align: center;
     font-weight: bold;
     opacity: 0;
@@ -291,10 +291,15 @@ span{
     opacity: 1;
   }
 
+  .description h3{
+    font-size: 30px;
+    line-height: 1.1;
+  }
   .description p{
-    padding-top: 30px ;
+    padding-top: 15px ;
     font-size: 18px;
     font-weight: 300;
+    line-height: 1.3;
   }
 
 
